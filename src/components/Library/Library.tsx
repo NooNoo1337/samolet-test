@@ -1,18 +1,12 @@
-import React, { FC } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import { useLib } from "../contexts/libsContext";
+import { useLib } from "../../contexts/libsContext";
 
 import { Card, PageHeader } from "antd";
 
-import { Library as LibraryType } from "../../interfaces/Library/Library";
-
-interface Props {
-  data?: null | LibraryType;
-}
-
 const backInHistory = (): void => window.history.back();
 
-const Library: FC<Props> = () => {
+const Library = () => {
   const { id } = useParams();
   const lib = useLib(Number(id));
 

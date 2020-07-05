@@ -5,7 +5,7 @@ import { ColumnProps } from "antd/lib/table";
 
 import { Library } from "../../interfaces/Library/Library";
 
-import { useLibs } from "../contexts/libsContext";
+import { useLibs } from "../../contexts/libsContext";
 
 const columns: ColumnProps<Library>[] = [
   {

@@ -1,6 +1,6 @@
 import React, { FC, useContext, createContext } from "react";
-import { Library } from "../../interfaces/Library/Library";
-import { libraryResolver } from "../../interfaces/Library/resolver";
+import { Library } from "../interfaces/Library/Library";
+import { libraryResolver } from "../interfaces/Library/resolver";
 import { useFetch } from "../hooks/useFetch";
 
 const LIBS_URI =
