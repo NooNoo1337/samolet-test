@@ -1,5 +1,11 @@
-const proxy = require('http-proxy-middleware');
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
-module.exports = function(app) {
-  app.use(proxy('/opendata/', { target: 'https://data.gov.ru/sites/default/files', changeOrigin: true, secure: false }));
+module.exports = (app) => {
+  app.use(
+    createProxyMiddleware("/opendata", {
+      target: "https://data.gov.ru/sites/default/files/",
+      changeOrigin: true,
+      secure: false,
+    })
+  );
 };
