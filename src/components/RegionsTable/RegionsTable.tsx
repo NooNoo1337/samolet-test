@@ -48,7 +48,7 @@ const RegionsTable = () => {
       <Table
         rowKey={({ order }) => order}
         columns={columns}
-        dataSource={filteredRegions ? filteredRegions : libs}
+        dataSource={filteredRegions || libs}
       />
     </>
   );
